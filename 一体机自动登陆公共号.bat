@@ -1,20 +1,16 @@
 @echo off
-REM É¾³ýËùÓÐÍøÂçÇý¶¯Æ÷Ó³Éä
+REM åˆ é™¤æ‰€æœ‰ç½‘ç»œé©±åŠ¨å™¨æ˜ å°„
 net use * /del /y
 
-REM ÌáÊ¾ÓÃ»§ÊäÈëÓÃ»§ÃûºÍÃÜÂë
-REM set /p username=ÇëÊäÈëÓÃ»§Ãû: 
-REM set /p password=ÇëÊäÈëÃÜÂë: 
-
-REM Ó³ÉäÍøÂçÇý¶¯Æ÷ Z: µ½ \\192.168.30.99\homes£¬Ê¹ÓÃÌá¹©µÄÓÃ»§ÃûºÍÃÜÂë
+REM æ˜ å°„ç½‘ç»œé©±åŠ¨å™¨ Z: åˆ° \\192.168.30.99\homesï¼Œä½¿ç”¨æä¾›çš„ç”¨æˆ·åå’Œå¯†ç 
 net use z: \\192.168.30.99\homes /user:000 123
 
-REM ¼ì²éÓ³ÉäÊÇ·ñ³É¹¦
+REM æ£€æŸ¥æ˜ å°„æ˜¯å¦æˆåŠŸ
 if errorlevel 1 (
-    echo Ó³ÉäÍøÂçÇý¶¯Æ÷Ê§°Ü¡£
+    echo æ˜ å°„ç½‘ç»œé©±åŠ¨å™¨å¤±è´¥ã€‚
 ) else (
-    echo Ó³ÉäÍøÂçÇý¶¯Æ÷³É¹¦¡£
+    echo æ˜ å°„ç½‘ç»œé©±åŠ¨å™¨æˆåŠŸã€‚
     
-    REM ´ò¿ªÎÄ¼þ×ÊÔ´¹ÜÀíÆ÷²¢ÏÔÊ¾ÐÂÓ³ÉäµÄÇý¶¯Æ÷
+    REM æ‰“å¼€æ–‡ä»¶èµ„æºç®¡ç†å™¨å¹¶æ˜¾ç¤ºæ–°æ˜ å°„çš„é©±åŠ¨å™¨
     explorer z:
 )
